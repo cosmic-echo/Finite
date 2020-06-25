@@ -24,18 +24,47 @@ Rectangle {
     id: root
     color: "#232629"
 
+    property int stage
+
+    onStageChanged: {
+        if (stage == 1) {
+            introAnimation.running = true
+        }
+    }
+
+    Item {
+        id: content
+        anchors.fill: parent
+        opacity: 0
+
+        AnimatedSprite {
+            source: "images/loading.png"
+            anchors.centerIn: parent
+            frameWidth: 200
+            frameHeight: 200
+            frameCount: 30
+            frameDuration: 20
+            interpolate: false
+            loops: AnimatedSprite.Infinite
+          }
+    }
+
     Image {
-        property int currentImage:1
-        id: loading
-        source: "images/frame-"+currentImage+".png"
+        id: loading0
+        source: "images/loading.png"
         anchors.centerIn: parent
         cache: true
-        NumberAnimation on currentImage {
+        opacity: 0
+    }
+
+    OpacityAnimator {
+        id: introAnimation
+        running: false
+        target: content
         from: 0
-        to: 29
-        duration: 700
-        loops: Animation.Infinite
-        }
-     }
+        to: 1
+        duration: 1000
+        easing.type: Easing.InOutQuad
+    }
 }
 

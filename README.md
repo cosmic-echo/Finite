@@ -8,6 +8,9 @@ A neat splashscreen for KDE.
 
 Place the Finite folder at /home/[YOUR USERNAME]/.local/share/plasma/look-and-feel/ (hit Control+H to show hidden folders)
 
+## Changelog
+* Fix lag issues
+
 
 ## License
 
