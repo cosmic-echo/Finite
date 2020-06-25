@@ -24,38 +24,18 @@ Rectangle {
     id: root
     color: "#232629"
 
-    property int stage
-
-    onStageChanged: {
-        if (stage == 2) {
-            introAnimation.running = true;
-        } else if (stage == 5) {
-            introAnimation.target = busyIndicator;
-            introAnimation.from = 1;
-            introAnimation.to = 0;
-            introAnimation.running = true;
-        }
-    }
-
-    Item {
-        id: content
-        anchors.fill: parent
-        opacity: 0
-
-        AnimatedImage {
-            id: busyIndicator
-            anchors.centerIn: parent
-            source: "images/loading.gif"
-        }
-    }
-
-    OpacityAnimator {
-        id: introAnimation
-        loops: 1
-        target: content
+    Image {
+        property int currentImage:1
+        id: loading
+        source: "images/frame-"+currentImage+".png"
+        anchors.centerIn: parent
+        cache: true
+        NumberAnimation on currentImage {
         from: 0
-        to: 1
-        duration: 1000
-        easing.type: Easing.InOutQuad
-    }
+        to: 29
+        duration: 700
+        loops: Animation.Infinite
+        }
+     }
 }
+

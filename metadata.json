@@ -14,7 +14,7 @@
         "ServiceTypes": [
             "Plasma/LookAndFeel"
         ],
-        "Version": "1.0",
+        "Version": "1.1",
         "Website": "https://github.com/cosmic-echo/"
     },
     "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
