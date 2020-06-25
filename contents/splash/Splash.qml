@@ -48,7 +48,7 @@ Rectangle {
             loops: AnimatedSprite.Infinite
           }
     }
-
+/*Might fix flickering issues*/
     Image {
         id: loading0
         source: "images/loading.png"
