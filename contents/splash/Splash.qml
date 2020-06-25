@@ -37,24 +37,19 @@ Rectangle {
         anchors.fill: parent
         opacity: 0
 
-        AnimatedSprite {
-            source: "images/loading.png"
+        Image {
+            property int currentImage:1
+            
+            id: image
             anchors.centerIn: parent
-            frameWidth: 200
-            frameHeight: 200
-            frameCount: 30
-            frameDuration: 20
-            interpolate: false
-            loops: AnimatedSprite.Infinite
-          }
-    }
-/*Might fix flickering issues*/
-    Image {
-        id: loading0
-        source: "images/loading.png"
-        anchors.centerIn: parent
-        cache: true
-        opacity: 0
+            source: "images/frame-"+currentImage+".png"
+                NumberAnimation on currentImage {
+                    from: 1
+                    to: 30
+                    duration: 1800
+                    loops: Animation.Infinite
+                }
+            }
     }
 
     OpacityAnimator {
@@ -67,4 +62,3 @@ Rectangle {
         easing.type: Easing.InOutQuad
     }
 }
-
