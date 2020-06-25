@@ -1,0 +1,23 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "cosmic-echo@outlook.com",
+                "Name": "Raul Gomes"
+            }
+        ],
+        "Category": "",
+        "Description": "A neat splashscreen.",
+        "Id": "Finite",
+        "License": "GPLv3+",
+        "Name": "Finite",
+        "ServiceTypes": [
+            "Plasma/LookAndFeel"
+        ],
+        "Version": "1.0",
+        "Website": "https://github.com/cosmic-echo/"
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+    "X-KDE-ParentApp": "",
+    "X-Plasma-MainScript": "defaults"
+}

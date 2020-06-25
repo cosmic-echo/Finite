@@ -1,0 +1,16 @@
+[Desktop Entry]
+Comment=A neat splashscreen.
+Keywords=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
+Name=Finite
+Type=Service
+
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Raul Sousa
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Email=cosmic-echo@outlook.com
+X-KDE-PluginInfo-License=GPLv3+
+X-KDE-PluginInfo-Name=Finite
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://github.com/cosmic-echo/
+X-Plasma-MainScript=defaults
